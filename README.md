@@ -1,5 +1,7 @@
-# 🏠 Airbnb Data Analytics Dashboard
+# 🏠 Airbnb End-to-End Power BI Project
 
+**Power BI | Power Query DAX | DAX**
+ 
 ## 📊 Project Overview
 
 This project is an end-to-end data analytics and business intelligence project focused on analyzing Airbnb booking, revenue, occupancy, pricing, property types, host performance, and customer review trends.
