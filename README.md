@@ -9,8 +9,11 @@ The interactive dashboard was built to provide an executive-level overview of Ai
 The project includes two main dashboard pages:
 
 - **Executive Overview**
+<img width="783" height="436" alt="Screenshot 2026-09-01 142029" src="https://github.com/user-attachments/assets/fc1647e0-7ac3-4e9c-a4b1-da0ad27cfdfd" />
+<img width="779" height="434" alt="Screenshot 2026-09-01 141547" src="https://github.com/user-attachments/assets/748cfbe3-dc22-444c-870e-9f770ea33875" />
+- 
 - **Host & Property Analysis**
-
+<img width="779" height="434" alt="Screenshot 2026-09-01 141547" src="https://github.com/user-attachments/assets/748cfbe3-dc22-444c-870e-9f770ea33875" />
 ---
 
 ## 🎯 Business Objectives
@@ -72,6 +75,17 @@ The Host & Property dashboard provides deeper insights into property categories 
   - Superhost Status
 
 ---
+📊 Dashboard Features
+Interactive Filters
+
+The dashboard includes interactive slicers for:
+
+Room Type
+Year
+
+Users can dynamically filter the dashboard to analyze Airbnb performance across different segments.
+
+---
 
 ## 📈 Key Metrics
 
@@ -113,24 +127,5 @@ Some of the business insights generated from the dashboard include:
 
 ---
 
-# 📂 Project Structure
-
-```text
-Airbnb-Data-Analytics-Dashboard/
-│
-├── data/
-│   └── airbnb_data.csv
-│
-├── powerbi/
-│   └── airbnb_dashboard.pbix
-│
-├── screenshots/
-│   ├── executive_overview.png
-│   └── host_property_analysis.png
-│
-└── README.md
-
-<img width="783" height="436" alt="Screenshot 2026-09-01 142029" src="https://github.com/user-attachments/assets/fc1647e0-7ac3-4e9c-a4b1-da0ad27cfdfd" />
-<img width="779" height="434" alt="Screenshot 2026-09-01 141547" src="https://github.com/user-attachments/assets/748cfbe3-dc22-444c-870e-9f770ea33875" />
 
 
