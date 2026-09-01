@@ -119,6 +119,20 @@ Some of the business insights generated from the dashboard include:
 - Premium property types generally have higher average nightly rates.
 
 ---
+🧮 Exclusive KPI Calculations
+
+Total Revenue Ref Label = VAR _cur = [Total Revenue]
+VAR _py = [Total Revenue PY]
+VAR _var = _cur - _py
+VAR _pct = DIVIDE(_var, ABS(_py))
+VAR _arrow = IF(_var >= 0 , UNICHAR(9650), UNICHAR(9660))
+VAR  _pctTxt = IF( _var >= 0,"+","") & FORMAT(_pct, "0.0%")
+VAR _vartext = IF(_var >= 0 , "+$","-$") & FORMAT(ABS(_var) / 1000000, "0.00") & "M"
+RETURN
+    _arrow & " " & _pctTxt 
+    & "  | PY: $ " & FORMAT(_py/ 1000000, "0.00") & "M"
+    & "  | Var: " & _vartext
+
 
 # 🛠️ Tools & Technologies
 
