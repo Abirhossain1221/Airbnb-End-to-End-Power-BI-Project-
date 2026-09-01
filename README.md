@@ -119,19 +119,58 @@ Some of the business insights generated from the dashboard include:
 - Premium property types generally have higher average nightly rates.
 
 ---
-🧮 Exclusive KPI Calculations
+## 🧮 Key DAX Measures
 
-Total Revenue Ref Label = VAR _cur = [Total Revenue]
+Below are some of the key DAX measures used in this Power BI project.
+
+### 💰 Total Revenue Reference Label
+
+This measure dynamically compares the current total revenue with the previous year's revenue and displays the percentage change, previous year revenue, and variance.
+
+```DAX
+Total Revenue Ref Label =
+VAR _cur = [Total Revenue]
+
 VAR _py = [Total Revenue PY]
+
 VAR _var = _cur - _py
+
 VAR _pct = DIVIDE(_var, ABS(_py))
-VAR _arrow = IF(_var >= 0 , UNICHAR(9650), UNICHAR(9660))
-VAR  _pctTxt = IF( _var >= 0,"+","") & FORMAT(_pct, "0.0%")
-VAR _vartext = IF(_var >= 0 , "+$","-$") & FORMAT(ABS(_var) / 1000000, "0.00") & "M"
+
+VAR _arrow =
+    IF(
+        _var >= 0,
+        UNICHAR(9650),
+        UNICHAR(9660)
+    )
+
+VAR _pctTxt =
+    IF(_var >= 0, "+", "") &
+    FORMAT(_pct, "0.0%")
+
+VAR _vartext =
+    IF(_var >= 0, "+$", "-$") &
+    FORMAT(ABS(_var) / 1000000, "0.00") &
+    "M"
+
 RETURN
-    _arrow & " " & _pctTxt 
-    & "  | PY: $ " & FORMAT(_py/ 1000000, "0.00") & "M"
-    & "  | Var: " & _vartext
+    _arrow & " " & _pctTxt
+    & " | PY: $" & FORMAT(_py / 1000000, "0.00") & "M"
+    & " | Var: " & _vartext
+```
+
+### 📊 What this measure displays
+
+Example output:
+
+`▲ +47.4% | PY: $119.25M | Var: +$56.47M`
+
+This allows the KPI card to dynamically show:
+
+- ▲ or ▼ performance indicator
+- Percentage increase or decrease
+- Previous year revenue
+- Revenue variance
 
 
 # 🛠️ Tools & Technologies
@@ -144,6 +183,5 @@ RETURN
 | **Excel / CSV** | Data source and initial data preparation |
 
 ---
-
 
 
