@@ -172,6 +172,30 @@ This allows the KPI card to dynamically show:
 - Previous year revenue
 - Revenue variance
 
+### 🎨 Conditional Formatting: Total Revenue Background
+
+This measure dynamically changes the background color of the Total Revenue KPI card based on its performance compared to the previous year's revenue.
+
+```DAX
+CF Background - Total Revenue =
+IF(
+    ISBLANK([Total Revenue PY]),
+    "#FFFFFF",
+    IF(
+        [Total Revenue] >= [Total Revenue PY],
+        "#E8F5E9",
+        "#FFEBEE"
+    )
+)
+```
+
+### 📊 What this measure does
+
+The measure returns different background colors based on revenue performance:
+
+- 🟢 **Light Green (`#E8F5E9`)** → Current revenue is greater than or equal to previous year revenue.
+- 🔴 **Light Red (`#FFEBEE`)** → Current revenue is lower than previous year revenue.
+- ⚪ **White (`#FFFFFF`)** → Previous year data is unavailable.
 
 # 🛠️ Tools & Technologies
 
