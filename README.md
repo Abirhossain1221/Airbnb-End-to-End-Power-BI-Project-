@@ -1,6 +1,6 @@
 # 🏠 Airbnb End-to-End Power BI Project
 
-**Power BI | Power Query DAX | DAX**
+       **Power BI | Power Query | DAX**
  
 ## 📊 Project Overview
 
