@@ -26,15 +26,15 @@ The project includes two main dashboard pages:
 The Power BI data model follows a **Star Schema**, with the booking records as the central fact table and supporting dimension tables surrounding it.
 
 FACT TABLE:
-- fact_bokings
+- fact_bookings
 
 ⬇️ connected to
 
 DIMENSION TABLES:
--dim_host
--dim_property
--dim_location
--dim_date
+- dim_host
+- dim_property
+- dim_location
+- dim_date
 
 <img width="874" height="460" alt="Screenshot 2026-09-02 170204" src="https://github.com/user-attachments/assets/828a79dd-d309-46db-8e13-83d06d01bd20" />
 
